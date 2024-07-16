@@ -1,4 +1,23 @@
 ﻿function ConvertFrom-UTCTime {
+    <#
+    .SYNOPSIS
+    Converts a given time from UTC to local time if specified.
+
+    .DESCRIPTION
+    This function converts a given time from Coordinated Universal Time (UTC) to local time based on the specified parameters.
+
+    .PARAMETER Time
+    Specifies the time to be converted from UTC to local time.
+
+    .PARAMETER ToLocalTime
+    Indicates whether the time should be converted to local time.
+
+    .EXAMPLE
+    ConvertFrom-UTCTime -Time "2022-01-01T12:00:00Z" -ToLocalTime
+
+    Converts the specified UTC time to local time.
+
+    #>
     [CmdLetbinding()]
     param(
         [Object] $Time,

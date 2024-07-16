@@ -1,4 +1,20 @@
 function Get-Office365ServiceHealthMessages {
+    <#
+    .SYNOPSIS
+    Retrieves message center information related to Office 365 services.
+
+    .DESCRIPTION
+    This function retrieves message center information related to Office 365 services based on the specified parameters.
+
+    .PARAMETER Authorization
+    Specifies the authorization information required to access the Office 365 message center data.
+
+    .EXAMPLE
+    Get-Office365ServiceHealthMessages -Authorization $Authorization
+
+    Retrieves message center information for the specified Office 365 tenant.
+
+    #>
     [CmdLetbinding()]
     param(
         [System.Collections.IDictionary] $Authorization

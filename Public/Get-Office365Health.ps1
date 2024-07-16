@@ -1,4 +1,32 @@
 function Get-Office365Health {
+    <#
+    .SYNOPSIS
+    Retrieves health information related to Office 365 services.
+
+    .DESCRIPTION
+    This function retrieves health information related to Office 365 services based on the specified parameters.
+
+    .PARAMETER ApplicationID
+    Specifies the Application ID used for authentication.
+
+    .PARAMETER ApplicationKey
+    Specifies the Application Key used for authentication.
+
+    .PARAMETER TenantDomain
+    Specifies the domain of the Office 365 tenant.
+
+    .PARAMETER TypesRequired
+    Specifies the types of health information to retrieve. Default is all types.
+
+    .PARAMETER ToLocalTime
+    Indicates whether to convert timestamps to local time.
+
+    .EXAMPLE
+    Get-Office365Health -ApplicationID "12345" -ApplicationKey "67890" -TenantDomain "contoso.com"
+
+    Retrieves all available health information for the specified Office 365 tenant.
+
+    #>
     [CmdLetbinding()]
     param(
         [string][alias('ClientID')] $ApplicationID,

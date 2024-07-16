@@ -1,4 +1,20 @@
 function Get-Office365ServiceHealthCurrentStatus {
+    <#
+    .SYNOPSIS
+    Retrieves the current health status information related to Office 365 services.
+
+    .DESCRIPTION
+    This function retrieves the current health status information related to Office 365 services based on the specified parameters.
+
+    .PARAMETER Authorization
+    Specifies the authorization information required to access the Office 365 service health data.
+
+    .PARAMETER TenantDomain
+    Specifies the domain of the Office 365 tenant.
+
+    .PARAMETER ToLocalTime
+    Indicates whether to convert timestamps to local time.
+    #>
     [CmdLetbinding()]
     param(
         [System.Collections.IDictionary] $Authorization,

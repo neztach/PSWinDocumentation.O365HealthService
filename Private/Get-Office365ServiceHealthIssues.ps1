@@ -1,4 +1,17 @@
 ﻿function Get-Office365ServiceHealthIssues {
+    <#
+    .SYNOPSIS
+    Retrieves incident information related to Office 365 services.
+
+    .DESCRIPTION
+    This function retrieves incident information related to Office 365 services based on the specified parameters.
+
+    .PARAMETER Authorization
+    Specifies the authorization information required to access the Office 365 incident data.
+
+    .PARAMETER ToLocalTime
+    Indicates whether to convert timestamps to local time.
+    #>
     [CmdLetbinding()]
     param(
         [System.Collections.IDictionary] $Authorization,
